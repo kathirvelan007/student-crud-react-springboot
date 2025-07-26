@@ -39,4 +39,9 @@ public class StudentService {
         return studentRepo.findByName(name);
     }
 
+    public Optional<Student> getStudentByEmail(String email) {
+        return studentRepo.findByEmail(email);
+    }
+
+
 }
