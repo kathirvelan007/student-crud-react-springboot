@@ -5,6 +5,8 @@ import ShowById from './pages/ShowById';
 import CreateStudent from './pages/CreateStudent';
 import UpdateStudent from './pages/UpdateStudent';
 import DeleteStudent from './pages/DeleteStudent';
+import ShowByName from './pages/ShowByName';
+import ShowByEmail from './pages/ShowByEmail';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/create-student" element={<CreateStudent />} />
         <Route path="/update-student" element={<UpdateStudent />} />
         <Route path="/delete-student" element={<DeleteStudent />} />
+        <Route path="/show-by-name" element={<ShowByName />} />
+        <Route path="/show-by-email" element={<ShowByEmail />} />
       </Routes>
     </Router>
   );

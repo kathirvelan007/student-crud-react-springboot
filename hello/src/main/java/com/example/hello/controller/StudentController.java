@@ -57,4 +57,20 @@ public class StudentController {
         studentService.deleteStudent(id);
         return ResponseEntity.noContent().build(); // 204 No Content
     }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Student> getByName(@PathVariable String name) {
+        Optional<Student> student = studentService.getStudentByName(name);
+        return student.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Student> getByEmail(@PathVariable String email) {
+        Optional<Student> student = studentService.getStudentByEmail(email);
+        return student.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+
 }

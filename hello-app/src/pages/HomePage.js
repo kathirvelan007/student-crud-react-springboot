@@ -8,6 +8,8 @@ function HomePage() {
       <h1>Student CRUD Home</h1>
       <button onClick={() => navigate('/students')}>Show All Students</button><br /><br />
       <button onClick={() => navigate('/student-by-id')}>Show Student by ID</button><br /><br />
+      <button onClick={() => navigate('/show-by-name')}>Show Student by Name</button><br /><br />
+      <button onClick={() => navigate('/show-by-email')}>Show Student by Email</button><br /><br />
       <button onClick={() => navigate('/create-student')}>Create Student</button><br /><br />
       <button onClick={() => navigate('/update-student')}>Update Student</button><br /><br />
       <button onClick={() => navigate('/delete-student')}>Delete Student</button>
