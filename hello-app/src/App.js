@@ -1,0 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ShowAll from './pages/ShowAll';
+import ShowById from './pages/ShowById';
+import CreateStudent from './pages/CreateStudent';
+import UpdateStudent from './pages/UpdateStudent';
+import DeleteStudent from './pages/DeleteStudent';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/students" element={<ShowAll />} />
+        <Route path="/student-by-id" element={<ShowById />} />
+        <Route path="/create-student" element={<CreateStudent />} />
+        <Route path="/update-student" element={<UpdateStudent />} />
+        <Route path="/delete-student" element={<DeleteStudent />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
